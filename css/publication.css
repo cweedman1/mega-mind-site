@@ -1,0 +1,150 @@
+.publication-hero {
+  padding: 72px 0 36px;
+  background: var(--color-command-dark);
+  color: #f4f8f5;
+}
+
+.publication-hero .eyebrow,
+.publication-hero .publication-subtitle {
+  color: #cbd8d1;
+}
+
+.publication-hero h1 {
+  max-width: 14ch;
+}
+
+.publication-subtitle {
+  max-width: 48rem;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+}
+
+.publication-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.publication-shell {
+  display: grid;
+  gap: 32px;
+  padding: 48px 0 72px;
+}
+
+.publication-meta {
+  display: grid;
+  gap: 14px;
+  padding: 24px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.publication-meta dl {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.publication-meta div {
+  display: grid;
+  gap: 3px;
+}
+
+.publication-meta dt,
+.publication-toc h2,
+.publication-article .section-label {
+  color: var(--color-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.publication-meta dd {
+  margin: 0;
+  color: var(--color-ink);
+}
+
+.publication-toc {
+  padding: 24px;
+  background: var(--color-subtle);
+  border: 1px solid var(--color-border);
+}
+
+.publication-toc ol {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.publication-toc a {
+  color: var(--color-command);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.publication-toc a:hover {
+  text-decoration: underline;
+}
+
+.publication-article {
+  max-width: 78ch;
+}
+
+.publication-article section {
+  padding: 28px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.publication-article h2 {
+  margin-bottom: 14px;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+}
+
+.publication-article h3 {
+  margin: 24px 0 8px;
+}
+
+.publication-article p,
+.publication-article li {
+  color: #26322e;
+}
+
+.publication-article ul,
+.publication-article ol {
+  margin-top: 0;
+  padding-left: 22px;
+}
+
+.formula-block {
+  margin: 18px 0;
+  padding: 16px;
+  background: var(--color-subtle);
+  border-left: 4px solid var(--color-command);
+  font-weight: 700;
+}
+
+.publication-note {
+  padding: 18px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+}
+
+@media (min-width: 880px) {
+  .publication-shell {
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: start;
+  }
+
+  .publication-sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + 24px);
+    order: 2;
+  }
+
+  .publication-article {
+    order: 1;
+  }
+}

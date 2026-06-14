@@ -11,11 +11,24 @@ Use for:
 
 - navbar branding
 - page headers
-- Open Graph
-- Twitter cards
-- social previews
 - documentation covers
 - presentations
+
+## Official Social Preview Image
+
+`images/og-megamind.webp`
+
+Purpose:
+Primary Open Graph and Twitter card image.
+
+Use for:
+
+- Open Graph
+- Twitter cards
+- RCS previews
+- Discord previews
+- LinkedIn previews
+- Slack previews
 
 ## Official Symbol Assets
 
