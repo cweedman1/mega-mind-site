@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logo Review | MegaMind Systems</title>
+    <meta name="description" content="Internal visual review page for MegaMind Systems logo and symbol assets.">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="images/megamind-favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicon-16.png" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      .review-hero {
+        padding: 48px 0;
+        background: #eef2ef;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .review-hero h1 {
+        max-width: 14ch;
+      }
+
+      .review-hero p {
+        max-width: 52rem;
+        color: var(--color-muted);
+      }
+
+      .review-grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .review-grid.two {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .review-grid.three {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .preview-card {
+        overflow: hidden;
+        background: var(--color-panel);
+        border: 1px solid var(--color-border);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .preview-card header {
+        padding: 16px 18px;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .preview-card h3 {
+        margin-bottom: 4px;
+      }
+
+      .preview-card p {
+        margin-bottom: 0;
+        color: var(--color-muted);
+        font-size: 0.92rem;
+      }
+
+      .preview-panel {
+        display: grid;
+        min-height: 220px;
+        place-items: center;
+        padding: 24px;
+      }
+
+      .preview-panel.dark {
+        background: #111816;
+      }
+
+      .preview-panel.light {
+        background: #f7f9f7;
+      }
+
+      .full-logo {
+        width: min(100%, 520px);
+        height: auto;
+      }
+
+      .symbol-scale {
+        display: grid;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .scale-row {
+        display: grid;
+        grid-template-columns: 56px 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .scale-row span {
+        color: var(--color-muted);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .symbol-swatch {
+        display: flex;
+        align-items: center;
+        min-height: 72px;
+        padding: 12px;
+        background: #eef2ef;
+        border: 1px solid var(--color-border);
+      }
+
+      .symbol-swatch.dark {
+        background: #111816;
+      }
+
+      .symbol-swatch.light {
+        background: #f7f9f7;
+      }
+
+      .symbol-swatch img {
+        flex: 0 0 auto;
+      }
+
+      .compare-grid {
+        display: grid;
+        gap: 18px;
+      }
+
+      .compare-card {
+        padding: 18px;
+        background: var(--color-panel);
+        border: 1px solid var(--color-border);
+      }
+
+      .compare-card h3 {
+        margin-bottom: 14px;
+      }
+
+      .compare-row {
+        display: grid;
+        grid-template-columns: 54px 1fr 1fr;
+        gap: 12px;
+        align-items: center;
+        padding: 12px 0;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .compare-row:first-of-type {
+        border-top: 0;
+      }
+
+      .compare-label {
+        color: var(--color-muted);
+        font-size: 0.84rem;
+        font-weight: 700;
+      }
+
+      .compare-swatch {
+        display: grid;
+        min-height: 76px;
+        place-items: center;
+        background: #eef2ef;
+        border: 1px solid var(--color-border);
+      }
+
+      .compare-swatch.dark {
+        background: #111816;
+      }
+
+      .compare-caption {
+        margin-bottom: 8px;
+        color: var(--color-muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .nav-sim {
+        display: grid;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .mock-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        min-height: 64px;
+        padding: 12px 16px;
+        background: #f7f9f7;
+        border: 1px solid var(--color-border);
+      }
+
+      .mock-nav.dark {
+        background: #111816;
+        color: #f7f9f7;
+      }
+
+      .mock-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+      }
+
+      .mock-brand img {
+        width: 32px;
+        height: 32px;
+      }
+
+      .nav-lockup-preview {
+        display: grid;
+        gap: 18px;
+        padding: 20px;
+      }
+
+      .brand-proposed,
+      .brand-current {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: inherit;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .brand-current img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .brand-proposed img {
+        width: auto;
+        height: 64px;
+        max-width: 180px;
+        object-fit: contain;
+      }
+
+      .dimension-note {
+        margin: 0;
+        color: var(--color-muted);
+        font-size: 0.92rem;
+      }
+
+      .mock-links {
+        display: flex;
+        gap: 14px;
+        color: var(--color-muted);
+        font-size: 0.88rem;
+      }
+
+      .mock-nav.dark .mock-links {
+        color: #cbd8d1;
+      }
+
+      .mock-mobile {
+        width: min(100%, 340px);
+      }
+
+      .mock-menu-button {
+        display: grid;
+        width: 38px;
+        height: 38px;
+        place-items: center;
+        border: 1px solid currentColor;
+      }
+
+      .favicon-row {
+        display: grid;
+        gap: 16px;
+      }
+
+      .browser-tab,
+      .bookmark {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-height: 44px;
+        padding: 10px 14px;
+        background: #f7f9f7;
+        border: 1px solid var(--color-border);
+      }
+
+      .browser-tab {
+        max-width: 320px;
+        border-radius: 8px 8px 0 0;
+      }
+
+      .bookmark {
+        max-width: 260px;
+      }
+
+      .favicon-preview {
+        image-rendering: auto;
+      }
+
+      .app-icon-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        align-items: end;
+      }
+
+      .app-icon-item {
+        display: grid;
+        gap: 8px;
+        justify-items: center;
+        color: var(--color-muted);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      .app-icon-item img {
+        border-radius: 24px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .recommendation-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .recommendation-card {
+        display: grid;
+        gap: 14px;
+        padding: 20px;
+        background: var(--color-panel);
+        border: 1px solid var(--color-border);
+      }
+
+      .recommendation-card h3 {
+        margin-bottom: 0;
+      }
+
+      .asset-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .asset-meta span {
+        padding: 4px 8px;
+        background: var(--color-subtle);
+        color: var(--color-muted);
+        font-size: 0.82rem;
+        font-weight: 700;
+      }
+
+      .usage-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .usage-list li {
+        padding: 6px 10px;
+        border: 1px solid var(--color-border);
+        color: var(--color-ink);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 640px) {
+        .mock-links {
+          display: none;
+        }
+
+        .compare-row {
+          grid-template-columns: 1fr;
+        }
+
+        .compare-label {
+          font-size: 0.9rem;
+        }
+
+        .brand-proposed img {
+          height: 48px;
+          max-width: 132px;
+        }
+
+        .preview-panel {
+          min-height: 180px;
+          padding: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header" data-header>
+      <nav class="site-nav container" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="MegaMind Systems home">
+          <img class="brand-mark" src="images/logo-primary.webp" width="1536" height="1024" alt="" aria-hidden="true">
+          <span class="brand-text">MegaMind Systems</span>
+        </a>
+        <div class="nav-menu" id="primary-menu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="earl.html">EARL</a>
+          <a href="papers.html">Papers</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="review-hero">
+        <div class="container">
+          <p class="eyebrow">Internal deployment review</p>
+          <h1>Logo Review</h1>
+          <p><strong>Internal deployment review page.</strong></p>
+          <p>Compare MegaMind brand assets across practical display contexts before selecting the primary site logo, navigation symbol, favicon source, and app icon.</p>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container section-header">
+          <p class="eyebrow">Navbar lockup decision</p>
+          <h2>Current Nav vs Proposed Nav</h2>
+          <p>The symbol remains available for favicon, watermark, and utility use. The primary navigation brand lockup should use the full `logo.webp` asset in a constrained container.</p>
+        </div>
+        <div class="container review-grid two">
+          <article class="preview-card">
+            <header>
+              <h3>Current Nav</h3>
+              <p>Utility symbol as primary brand mark</p>
+            </header>
+            <div class="nav-lockup-preview">
+              <div class="mock-nav">
+                <a class="brand-current" href="index.html">
+                  <img src="images/megamind-symbol-v2.svg" width="40" height="40" alt="">
+                  <span>MegaMind Systems</span>
+                </a>
+                <span class="mock-links">Research About Contact</span>
+              </div>
+              <p class="dimension-note">Useful as an icon, but not preferred as the primary brand lockup.</p>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header>
+              <h3>Proposed Nav</h3>
+              <p>Full brand lockup constrained for responsive header use</p>
+            </header>
+            <div class="nav-lockup-preview">
+              <div class="mock-nav">
+                <a class="brand-proposed" href="index.html">
+                  <img src="images/archive/logo.webp" width="1536" height="1024" alt="MegaMind Systems">
+                </a>
+                <span class="mock-links">Research About Contact</span>
+              </div>
+              <p class="dimension-note">Recommended final dimensions: desktop height 64px with a 72px maximum; tablet 56px; mobile 44-48px with max width near 132px.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-header">
+          <p class="eyebrow">Section 1</p>
+          <h2>Full Brand Assets</h2>
+          <p>Review full logo files on dark and light surfaces for contrast, compression quality, and deployment readiness.</p>
+        </div>
+        <div class="container review-grid two">
+          <article class="preview-card">
+            <header>
+              <h3>logo.png</h3>
+              <p>Source raster, 1536x1024</p>
+            </header>
+            <div class="preview-panel dark">
+              <img class="full-logo" src="images/archive/logo.png" width="1536" height="1024" alt="MegaMind Systems logo PNG on dark background">
+            </div>
+            <div class="preview-panel light">
+              <img class="full-logo" src="images/archive/logo.png" width="1536" height="1024" alt="MegaMind Systems logo PNG on light background">
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header>
+              <h3>logo.webp</h3>
+              <p>Optimized raster, 1536x1024</p>
+            </header>
+            <div class="preview-panel dark">
+              <img class="full-logo" src="images/archive/logo.webp" width="1536" height="1024" alt="MegaMind Systems logo WebP on dark background">
+            </div>
+            <div class="preview-panel light">
+              <img class="full-logo" src="images/archive/logo.webp" width="1536" height="1024" alt="MegaMind Systems logo WebP on light background">
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container section-header">
+          <p class="eyebrow">Section 2</p>
+          <h2>Symbol Assets</h2>
+          <p>Compare the vector symbol family at common interface sizes.</p>
+        </div>
+        <div class="container review-grid three">
+          <article class="preview-card">
+            <header>
+              <h3>megamind-symbol.svg</h3>
+              <p>Transparent vector, 256 viewBox</p>
+            </header>
+            <div class="symbol-scale">
+              <div class="scale-row"><span>32px</span><div class="symbol-swatch"><img src="images/archive/megamind-symbol.svg" width="32" height="32" alt="MegaMind symbol at 32 pixels"></div></div>
+              <div class="scale-row"><span>64px</span><div class="symbol-swatch"><img src="images/archive/megamind-symbol.svg" width="64" height="64" alt="MegaMind symbol at 64 pixels"></div></div>
+              <div class="scale-row"><span>128px</span><div class="symbol-swatch"><img src="images/archive/megamind-symbol.svg" width="128" height="128" alt="MegaMind symbol at 128 pixels"></div></div>
+              <div class="scale-row"><span>256px</span><div class="symbol-swatch"><img src="images/archive/megamind-symbol.svg" width="256" height="256" alt="MegaMind symbol at 256 pixels"></div></div>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header>
+              <h3>megamind-symbol-dark.svg</h3>
+              <p>Dark tile vector, 256 viewBox</p>
+            </header>
+            <div class="symbol-scale">
+              <div class="scale-row"><span>32px</span><div class="symbol-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="32" height="32" alt="MegaMind dark symbol at 32 pixels"></div></div>
+              <div class="scale-row"><span>64px</span><div class="symbol-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="64" height="64" alt="MegaMind dark symbol at 64 pixels"></div></div>
+              <div class="scale-row"><span>128px</span><div class="symbol-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="128" height="128" alt="MegaMind dark symbol at 128 pixels"></div></div>
+              <div class="scale-row"><span>256px</span><div class="symbol-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="256" height="256" alt="MegaMind dark symbol at 256 pixels"></div></div>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header>
+              <h3>megamind-symbol-light.svg</h3>
+              <p>Light tile vector, 256 viewBox</p>
+            </header>
+            <div class="symbol-scale">
+              <div class="scale-row"><span>32px</span><div class="symbol-swatch light"><img src="images/archive/megamind-symbol-light.svg" width="32" height="32" alt="MegaMind light symbol at 32 pixels"></div></div>
+              <div class="scale-row"><span>64px</span><div class="symbol-swatch light"><img src="images/archive/megamind-symbol-light.svg" width="64" height="64" alt="MegaMind light symbol at 64 pixels"></div></div>
+              <div class="scale-row"><span>128px</span><div class="symbol-swatch light"><img src="images/archive/megamind-symbol-light.svg" width="128" height="128" alt="MegaMind light symbol at 128 pixels"></div></div>
+              <div class="scale-row"><span>256px</span><div class="symbol-swatch light"><img src="images/archive/megamind-symbol-light.svg" width="256" height="256" alt="MegaMind light symbol at 256 pixels"></div></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-header">
+          <p class="eyebrow">Refinement pass</p>
+          <h2>Current vs V2</h2>
+          <p>V2 keeps the same labyrinth M concept while reducing interior corridor noise and making the gold route more continuous and dominant at interface sizes.</p>
+        </div>
+        <div class="container compare-grid">
+          <article class="compare-card">
+            <h3>Transparent Symbol</h3>
+            <div class="compare-row">
+              <span class="compare-label">16px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol.svg" width="16" height="16" alt="Current MegaMind symbol at 16 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-v2.svg" width="16" height="16" alt="MegaMind symbol V2 at 16 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">32px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol.svg" width="32" height="32" alt="Current MegaMind symbol at 32 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-v2.svg" width="32" height="32" alt="MegaMind symbol V2 at 32 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">64px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol.svg" width="64" height="64" alt="Current MegaMind symbol at 64 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-v2.svg" width="64" height="64" alt="MegaMind symbol V2 at 64 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">128px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol.svg" width="128" height="128" alt="Current MegaMind symbol at 128 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-v2.svg" width="128" height="128" alt="MegaMind symbol V2 at 128 pixels"></div></div>
+            </div>
+          </article>
+
+          <article class="compare-card">
+            <h3>Dark Symbol</h3>
+            <div class="compare-row">
+              <span class="compare-label">16px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="16" height="16" alt="Current dark MegaMind symbol at 16 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch dark"><img src="images/megamind-symbol-dark-v2.svg" width="16" height="16" alt="Dark MegaMind symbol V2 at 16 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">32px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="32" height="32" alt="Current dark MegaMind symbol at 32 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch dark"><img src="images/megamind-symbol-dark-v2.svg" width="32" height="32" alt="Dark MegaMind symbol V2 at 32 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">64px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="64" height="64" alt="Current dark MegaMind symbol at 64 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch dark"><img src="images/megamind-symbol-dark-v2.svg" width="64" height="64" alt="Dark MegaMind symbol V2 at 64 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">128px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch dark"><img src="images/archive/megamind-symbol-dark.svg" width="128" height="128" alt="Current dark MegaMind symbol at 128 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch dark"><img src="images/megamind-symbol-dark-v2.svg" width="128" height="128" alt="Dark MegaMind symbol V2 at 128 pixels"></div></div>
+            </div>
+          </article>
+
+          <article class="compare-card">
+            <h3>Light Symbol</h3>
+            <div class="compare-row">
+              <span class="compare-label">16px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol-light.svg" width="16" height="16" alt="Current light MegaMind symbol at 16 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-light-v2.svg" width="16" height="16" alt="Light MegaMind symbol V2 at 16 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">32px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol-light.svg" width="32" height="32" alt="Current light MegaMind symbol at 32 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-light-v2.svg" width="32" height="32" alt="Light MegaMind symbol V2 at 32 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">64px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol-light.svg" width="64" height="64" alt="Current light MegaMind symbol at 64 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-light-v2.svg" width="64" height="64" alt="Light MegaMind symbol V2 at 64 pixels"></div></div>
+            </div>
+            <div class="compare-row">
+              <span class="compare-label">128px</span>
+              <div><p class="compare-caption">Current</p><div class="compare-swatch"><img src="images/archive/megamind-symbol-light.svg" width="128" height="128" alt="Current light MegaMind symbol at 128 pixels"></div></div>
+              <div><p class="compare-caption">V2</p><div class="compare-swatch"><img src="images/megamind-symbol-light-v2.svg" width="128" height="128" alt="Light MegaMind symbol V2 at 128 pixels"></div></div>
+            </div>
+          </article>
+
+          <article class="recommendation-card">
+            <h3>Deployment Recommendation</h3>
+            <div class="asset-meta"><span>V2 preferred</span><span>route-first</span><span>small-size optimized</span></div>
+            <p>Best version by usage:</p>
+            <ul class="usage-list">
+              <li>Navbar: images/logo-primary.webp</li>
+              <li>Favicon: megamind-favicon.svg</li>
+              <li>GitHub avatar: megamind-symbol-dark-v2.svg</li>
+              <li>PDF watermark: megamind-symbol-v2.svg</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-header">
+          <p class="eyebrow">Section 3</p>
+          <h2>Navigation Simulation</h2>
+          <p>Preview each symbol in desktop and mobile navigation contexts.</p>
+        </div>
+        <div class="container review-grid three">
+          <article class="preview-card">
+            <header><h3>megamind-symbol.svg</h3><p>Transparent symbol in nav</p></header>
+            <div class="nav-sim">
+              <div class="mock-nav"><span class="mock-brand"><img src="images/archive/megamind-symbol.svg" alt="">MegaMind Systems</span><span class="mock-links">Research About Contact</span></div>
+              <div class="mock-nav mock-mobile"><span class="mock-brand"><img src="images/archive/megamind-symbol.svg" alt="">MegaMind</span><span class="mock-menu-button">=</span></div>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header><h3>megamind-symbol-dark.svg</h3><p>Dark tile in nav</p></header>
+            <div class="nav-sim">
+              <div class="mock-nav dark"><span class="mock-brand"><img src="images/archive/megamind-symbol-dark.svg" alt="">MegaMind Systems</span><span class="mock-links">Research About Contact</span></div>
+              <div class="mock-nav dark mock-mobile"><span class="mock-brand"><img src="images/archive/megamind-symbol-dark.svg" alt="">MegaMind</span><span class="mock-menu-button">=</span></div>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header><h3>megamind-symbol-light.svg</h3><p>Light tile in nav</p></header>
+            <div class="nav-sim">
+              <div class="mock-nav"><span class="mock-brand"><img src="images/archive/megamind-symbol-light.svg" alt="">MegaMind Systems</span><span class="mock-links">Research About Contact</span></div>
+              <div class="mock-nav mock-mobile"><span class="mock-brand"><img src="images/archive/megamind-symbol-light.svg" alt="">MegaMind</span><span class="mock-menu-button">=</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container section-header">
+          <p class="eyebrow">Section 4</p>
+          <h2>Favicon Simulation</h2>
+          <p>Preview favicon files in browser tab and bookmark contexts.</p>
+        </div>
+        <div class="container review-grid two">
+          <article class="preview-card">
+            <header><h3>favicon-16.png</h3><p>16x16 browser favicon</p></header>
+            <div class="preview-panel light favicon-row">
+              <div class="browser-tab"><img class="favicon-preview" src="images/favicon-16.png" width="16" height="16" alt="16 pixel favicon">MegaMind Systems</div>
+              <div class="bookmark"><img class="favicon-preview" src="images/favicon-16.png" width="16" height="16" alt="16 pixel bookmark icon">MegaMind</div>
+            </div>
+          </article>
+
+          <article class="preview-card">
+            <header><h3>favicon-32.png</h3><p>32x32 browser favicon</p></header>
+            <div class="preview-panel light favicon-row">
+              <div class="browser-tab"><img class="favicon-preview" src="images/favicon-32.png" width="16" height="16" alt="32 pixel favicon displayed at tab size">MegaMind Systems</div>
+              <div class="bookmark"><img class="favicon-preview" src="images/favicon-32.png" width="32" height="32" alt="32 pixel bookmark icon">MegaMind</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-header">
+          <p class="eyebrow">Section 5</p>
+          <h2>App Icon Preview</h2>
+          <p>Preview the touch icon at native and reduced sizes.</p>
+        </div>
+        <div class="container preview-card">
+          <header><h3>apple-touch-icon.png</h3><p>180x180 app and home-screen icon</p></header>
+          <div class="preview-panel light">
+            <div class="app-icon-row">
+              <div class="app-icon-item"><img src="images/apple-touch-icon.png" width="180" height="180" alt="Apple touch icon at 180 pixels"><span>180px</span></div>
+              <div class="app-icon-item"><img src="images/apple-touch-icon.png" width="120" height="120" alt="Apple touch icon at 120 pixels"><span>120px</span></div>
+              <div class="app-icon-item"><img src="images/apple-touch-icon.png" width="60" height="60" alt="Apple touch icon at 60 pixels"><span>60px</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted">
+        <div class="container section-header">
+          <p class="eyebrow">Section 6</p>
+          <h2>Recommendation Panel</h2>
+          <p>Intended usage notes for the current asset set.</p>
+        </div>
+        <div class="container recommendation-list">
+          <article class="recommendation-card">
+            <h3>logo.png</h3>
+            <div class="asset-meta"><span>1536x1024</span><span>PNG</span><span>Source raster</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>archive source</li><li>high-resolution review</li><li>future derivative exports</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>logo.webp</h3>
+            <div class="asset-meta"><span>1536x1024</span><span>WebP</span><span>Optimized full logo</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>brand review pages</li><li>open graph image source</li><li>hero or media placements</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>logo-square.webp</h3>
+            <div class="asset-meta"><span>512x512</span><span>WebP</span><span>Square contained logo</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>profile previews</li><li>legacy square upload targets</li><li>temporary social avatar</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Transparent vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>navigation</li><li>favicon source</li><li>PDF watermark</li><li>GitHub avatar</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol-dark.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Dark tile vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>dark nav contexts</li><li>social avatar testing</li><li>presentation title marks</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol-light.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Light tile vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>light nav contexts</li><li>document headers</li><li>small brand badges</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol-v2.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Refined transparent vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>primary navigation</li><li>PDF watermark</li><li>site badge</li><li>general vector use</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol-dark-v2.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Refined dark tile vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>GitHub avatar</li><li>dark profile targets</li><li>small social previews</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-symbol-light-v2.svg</h3>
+            <div class="asset-meta"><span>256 viewBox</span><span>SVG</span><span>Refined light tile vector</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>light profile targets</li><li>document badges</li><li>light dashboard headers</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>megamind-favicon.svg</h3>
+            <div class="asset-meta"><span>64 viewBox</span><span>SVG</span><span>Dedicated favicon mark</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>primary favicon source</li><li>16px browser tab</li><li>32px bookmark icon</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>favicon-32.png</h3>
+            <div class="asset-meta"><span>32x32</span><span>PNG</span><span>Browser icon</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>primary favicon</li><li>bookmark icon</li><li>browser tab testing</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>favicon-16.png</h3>
+            <div class="asset-meta"><span>16x16</span><span>PNG</span><span>Small browser icon</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>legacy favicon fallback</li><li>small tab rendering review</li><li>dense browser UI</li></ul>
+          </article>
+          <article class="recommendation-card">
+            <h3>apple-touch-icon.png</h3>
+            <div class="asset-meta"><span>180x180</span><span>PNG</span><span>Touch icon</span></div>
+            <p>Recommended for:</p>
+            <ul class="usage-list"><li>iOS home screen</li><li>PWA icon fallback</li><li>mobile app-like previews</li></ul>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <strong>MegaMind Systems</strong>
+          <p>Logo review surface for deployment decisions.</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="research.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div class="container footer-bottom">
+        <span>&copy; 2026 MegaMind Systems. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>

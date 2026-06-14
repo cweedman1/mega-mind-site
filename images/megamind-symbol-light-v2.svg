@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">MegaMind Systems symbol light V2</title>
+  <desc id="desc">A refined light labyrinth M symbol with a dominant illuminated route.</desc>
+  <defs>
+    <linearGradient id="mm-gold-v2" x1="30" y1="220" x2="226" y2="36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#91651d"/>
+      <stop offset=".48" stop-color="#dca92e"/>
+      <stop offset="1" stop-color="#a86f21"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="#f7f9f7"/>
+  <g fill="none" stroke-linecap="square" stroke-linejoin="miter">
+    <path d="M36 36h184v184H36z" stroke="#1e2d28" stroke-width="16"/>
+    <path d="M64 64h54M150 64h42M64 192h48M146 192h46M64 92v44M192 92v44M64 164v28M192 164v28" stroke="#1e2d28" stroke-width="15"/>
+    <path d="M92 92h34v28M164 92h-30v28M92 164h30v-36M164 164h-30v-36" stroke="#1e2d28" stroke-width="15"/>
+    <path d="M88 170V94h30l42 60 42-60h30v76h-30v-42l-42 58-42-58v42z" stroke="#1e2d28" stroke-width="20"/>
+    <path d="M34 128h40V74h42v40l44 66 44-66v70h24" stroke="url(#mm-gold-v2)" stroke-width="12"/>
+    <path d="M34 128h40V74h42v40l44 66 44-66v70h24" stroke="#ffe191" stroke-width="4"/>
+  </g>
+  <g fill="#dca92e" stroke="#f7f9f7" stroke-width="5">
+    <circle cx="34" cy="128" r="10"/>
+    <circle cx="228" cy="184" r="10"/>
+  </g>
+</svg>

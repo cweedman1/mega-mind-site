@@ -1,0 +1,122 @@
+@import url("utilities.css");
+@import url("nav.css");
+@import url("hero.css");
+@import url("sections.css");
+@import url("cards.css");
+@import url("responsive.css");
+
+:root {
+  color-scheme: light;
+  --color-ink: #18211e;
+  --color-muted: #58645f;
+  --color-subtle: #eef2ef;
+  --color-panel: #ffffff;
+  --color-border: #cdd7d0;
+  --color-field: #f7f9f7;
+  --color-command: #23483c;
+  --color-command-dark: #18332b;
+  --color-accent: #b64e2f;
+  --color-lab: #d8e4df;
+  --shadow-sm: 0 1px 2px rgb(24 33 30 / 10%);
+  --shadow-md: 0 14px 35px rgb(24 33 30 / 12%);
+  --font-base: Arial, Helvetica, sans-serif;
+  --max-width: 1160px;
+  --header-height: 72px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f9faf8;
+  color: var(--color-ink);
+  font-family: var(--font-base);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 4.75rem);
+  max-width: 12ch;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: 1.08rem;
+}
+
+main {
+  min-height: 60vh;
+}
+
+.site-footer {
+  background: var(--color-command-dark);
+  color: #f4f8f5;
+  padding: 44px 0 24px;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 28px;
+}
+
+.footer-grid p {
+  max-width: 38rem;
+  margin-bottom: 0;
+  color: #cbd8d1;
+}
+
+.footer-grid nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+}
+
+.footer-grid a {
+  color: #f4f8f5;
+  text-decoration: none;
+}
+
+.footer-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid rgb(244 248 245 / 18%);
+  color: #cbd8d1;
+  font-size: 0.9rem;
+}

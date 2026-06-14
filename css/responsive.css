@@ -1,0 +1,77 @@
+@media (min-width: 720px) {
+  .footer-grid,
+  .split,
+  .contact-panel {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  }
+
+  .card-grid.three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .paper-card {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .nav-menu a {
+    padding: 8px 12px;
+  }
+
+  .nav-menu .nav-cta {
+    margin-left: 8px;
+  }
+
+  .brand-mark {
+    height: clamp(56px, 5vw, 72px);
+    max-width: 180px;
+  }
+
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  }
+
+  .hero-home {
+    min-height: calc(100vh - var(--header-height) - 72px);
+    display: grid;
+    align-items: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand-text {
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero-actions,
+  .button {
+    width: 100%;
+  }
+
+  .button {
+    justify-content: center;
+  }
+
+  .contact-panel {
+    padding: 20px;
+  }
+}
