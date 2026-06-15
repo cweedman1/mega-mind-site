@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://megamindsystems.com/sitemap.xml
+Sitemap: https://mega-mind.systems/sitemap.xml

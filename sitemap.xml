@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://megamindsystems.com/</loc>
+    <loc>https://mega-mind.systems/</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/about.html</loc>
+    <loc>https://mega-mind.systems/about.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/research.html</loc>
+    <loc>https://mega-mind.systems/research.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/earl.html</loc>
+    <loc>https://mega-mind.systems/earl.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/papers.html</loc>
+    <loc>https://mega-mind.systems/papers.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/stop-rediscovering-texas.html</loc>
+    <loc>https://mega-mind.systems/field-notes.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/operational-memory-and-informal-systems.html</loc>
+    <loc>https://mega-mind.systems/case-files.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/earl-problem.html</loc>
+    <loc>https://mega-mind.systems/stop-rediscovering-texas.html</loc>
   </url>
   <url>
-    <loc>https://megamindsystems.com/contact.html</loc>
+    <loc>https://mega-mind.systems/operational-memory-and-informal-systems.html</loc>
+  </url>
+  <url>
+    <loc>https://mega-mind.systems/earl-problem.html</loc>
+  </url>
+  <url>
+    <loc>https://mega-mind.systems/contact.html</loc>
   </url>
 </urlset>

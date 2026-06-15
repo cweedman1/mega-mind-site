@@ -25,6 +25,15 @@
   margin-top: 28px;
 }
 
+.publication-hero .button-secondary {
+  border-color: #f4f8f5;
+  color: #f4f8f5;
+}
+
+.publication-hero .button-secondary:hover {
+  background: rgb(244 248 245 / 12%);
+}
+
 .publication-shell {
   display: grid;
   gap: 32px;

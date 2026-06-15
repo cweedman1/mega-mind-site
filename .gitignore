@@ -1,1 +1,27 @@
 images/archive/
+
+# Operating system noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local editor/workspace artifacts
+*.code-workspace
+.vscode/*.log
+
+# Temporary build/export artifacts
+*.tmp
+*.bak
+*.log
+~$*
+*.local
+
+# Local exports and scratch PDFs
+exports/
+tmp/
+temp/
+drafts/
+*.draft.pdf
+*-draft.pdf
+*-tmp.pdf
+*-temp.pdf
